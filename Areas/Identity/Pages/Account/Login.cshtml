@@ -1,0 +1,57 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Log in";
+}
+
+<h1 class="montserrat-titulo">LOG IN</h1>
+
+<br />
+
+<div class="row w-100 d-flex justify-content-center uma flex-lg-shrink-0">
+    <div class="w-25 d-flex justify-content-center">
+        <section>
+            <form id="account" method="post">
+               
+                <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div> 
+                <label asp-for="Input.Email" class="form-label">Email</label>
+                <div class="form-floating mb-3">
+                   
+                    <input asp-for="Input.Email" class="testeform form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
+                  
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div> 
+                <label asp-for="Input.Password" class="form-label">Senha</label>
+                <div class="form-floating ">
+                    <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="password" />
+                   
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+                <div class="checkbox mb-3 text-align: center; ">
+                    
+                    <p>
+                        <a id="forgot-password" asp-page="./ForgotPassword">Esqueceu sua senha?</a>
+                    </p>
+                </div>
+                <div>
+                    <button id="login-submit" type="submit" class="w-100 btn-lg fw-bold">Entre </button>
+                </div>
+                <div>
+                 
+                    <p>
+                        Não possui uma conta?
+                        <a class="cadast" asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl"> Cadastre-se.</a>
+                    </p>
+                </div>
+            </form>
+        </section>
+    </div>
+</div>
+
+<br>
+<br>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

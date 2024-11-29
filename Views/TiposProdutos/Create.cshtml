@@ -1,0 +1,42 @@
+﻿@model SerTerraQueijaria.Models.TiposProdutos
+
+@{
+    Layout = "_Layout-Admin";
+    ViewData["Title"] = "Create";
+}
+<div class="linhas w-100">
+    <hr class="styleLinha" size="4" />
+    <h1 class="lancaLinha">CRIAR</h1>
+    <hr class="styleLinha" size="4">
+</div>
+
+
+<hr class="ms-4 me-4" />
+<div class="container">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group mt-2">
+                <label asp-for="TipoProduto" class="control-label"></label>
+                <input asp-for="TipoProduto" class="form-control" />
+                <span asp-validation-for="TipoProduto" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mt-2 d-flex">
+                <input type="submit" value="Criar" class="btn btn-outline-success mt-2 me-2" />
+                <a asp-action="Index" class="btn border-1 border-dark mt-2 me-2">
+                    <svg bootstrap-icon="ArrowLeft" width="16" height="16" aria-label="Voltar"></svg> Voltar
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+

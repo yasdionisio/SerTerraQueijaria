@@ -1,0 +1,32 @@
+﻿@model IEnumerable<SerTerraQueijaria.Models.Produto>
+
+@{
+    ViewData["Title"] = "Produtos";
+}
+
+<!-- Título Produtos com linha -->
+<div class="linhas w-100">
+    <hr class="styleLinha" size="4" />
+    <h1 class="lancaLinha">PRODUTOS</h1>
+    <hr class="styleLinha" size="4">
+</div>
+
+<div class="container-card">
+    @foreach (var item in Model)
+    {
+
+        <div class="cardsIni">
+            <img src="@item.Imagem" class="card-img-top" alt="...">
+            <div class="card-body  text-center">
+                <h5 class="card-title"> <b>@item.NomeProduto</b></h5>
+                <p class="card-text"><b>@item.PrecoUnitario</b></p>
+                <a href="https://www.whatsapp.com/" class="btn-card card-sem-margem fw-bold">COMPRAR</a>
+
+
+
+
+            </div>
+
+        </div>
+    }
+</div>

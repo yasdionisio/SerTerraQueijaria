@@ -1,0 +1,69 @@
+﻿@model SerTerraQueijaria.Models.Produto
+
+@{
+    Layout = "_Layout-Admin";
+    ViewData["Title"] = "Criar";
+}
+
+<div class="linhas w-100">
+    <hr class="styleLinha" size="4" />
+    <h1 class="lancaLinha">CRIAR</h1>
+    <hr class="styleLinha" size="4">
+</div>
+
+
+<hr />
+<div class="container">
+    <div class="col-md-4">
+       
+        @using (Html.BeginForm("Create", "Produtos", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group mt-2">
+                <label asp-for="NomeProduto" class="control-label"></label>
+                <input asp-for="NomeProduto" class="form-control" />
+                <span asp-validation-for="NomeProduto" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mt-2">
+                <label asp-for="Descricao" class="control-label"></label>
+                <input asp-for="Descricao" class="form-control" />
+                <span asp-validation-for="Descricao" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mt-2">
+                <label asp-for="PrecoUnitario" class="control-label"></label>
+                <input asp-for="PrecoUnitario" class="form-control" />
+                <span asp-validation-for="PrecoUnitario" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mt-2">
+                <label asp-for="QtdEstoque" class="control-label"></label>
+                <input asp-for="QtdEstoque" class="form-control" />
+                <span asp-validation-for="QtdEstoque" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mt-2">
+                <label asp-for="TiposProdutosId" class="control-label"></label>
+                <select asp-for="TiposProdutosId" class="form-control" asp-items="ViewBag.TiposProdutosId"></select>
+            </div>
+
+            <div class="form-group mt-2">
+                @Html.LabelFor(model => model.Imagem, "Imagem do Produto")
+                <input type="file" name="Imagem" accept="image/*" class="form-control" />
+            </div>
+
+            <div class="form-group mt-2 d-flex">
+                <input type="submit" value="Criar" class="btn btn-outline-success mt-2 me-2" />
+                <a asp-action="Index" class="btn border-1 border-dark mt-2 me-2">
+                    <svg bootstrap-icon="ArrowLeft" width="16" height="16" aria-label="Voltar"></svg> Voltar
+                </a>
+            </div>
+            }
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

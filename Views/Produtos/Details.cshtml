@@ -1,0 +1,59 @@
+﻿@model SerTerraQueijaria.Models.Produto
+
+@{
+    Layout = "_Layout-Admin";
+    ViewData["Title"] = "Detalhes";
+}
+
+<div class="linhas w-100">
+    <hr class="styleLinha" size="4" />
+    <h1 class="lancaLinha">DETALHES</h1>
+    <hr class="styleLinha" size="4">
+</div>
+
+
+
+    <div>
+        <dl class="row">
+            <dt class="col-sm-2 mt-2 ms-4">
+                @Html.DisplayNameFor(model => model.NomeProduto)
+            </dt>
+            <dd class="col-sm-10 mt-2 ms-4">
+                @Html.DisplayFor(model => model.NomeProduto)
+            </dd>
+            <dt class="col-sm-2 mt-2 ms-4">
+                @Html.DisplayNameFor(model => model.Descricao)
+            </dt>
+            <dd class="col-sm-10 mt-2 ms-4">
+                @Html.DisplayFor(model => model.Descricao)
+            </dd>
+            <dt class="col-sm-2 mt-2 ms-4">
+                @Html.DisplayNameFor(model => model.PrecoUnitario)
+            </dt>
+            <dd class="col-sm-10 mt-2 ms-4">
+                @Html.DisplayFor(model => model.PrecoUnitario)
+            </dd>
+            <dt class="col-sm-2 mt-2 ms-4">
+                @Html.DisplayNameFor(model => model.QtdEstoque)
+            </dt>
+            <dd class="col-sm-10 mt-2 ms-4">
+                @Html.DisplayFor(model => model.QtdEstoque)
+            </dd>
+            <dt class="col-sm-2 mt-2 ms-4">
+                @Html.DisplayNameFor(model => model.TiposProdutosId)
+            </dt>
+            <dd class="col-sm-10 mt-2 ms-4">
+                @Html.DisplayFor(model => model.TiposProdutosId)
+            </dd>
+        </dl>
+
+
+
+        <div class="mt-4 ms-4">
+            <a asp-action="Edit" asp-route-id="@Model?.ProdutoId" class="btn btn-outline-warning me-2">Editar</a>
+
+            <a asp-action="Index" class="btn border-1 border-dark">
+                <svg bootstrap-icon="ArrowLeft" width="16" height="16" aria-label="Voltar"></svg> Voltar
+            </a>
+        </div>
+    </div>

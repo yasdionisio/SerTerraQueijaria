@@ -1,0 +1,68 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Cadastre-se";
+}
+
+<h1 class="montserrat-titulo">CADASTRE-SE</h1>
+
+<br />
+
+<div class="row w-100 d-flex justify-content-center flex-lg-shrink-0">
+    <div class="row d-flex justify-content-center w-50">
+        <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+
+            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+
+            <!-- Nome Completo -->
+            <label asp-for="Input.Name">Nome Completo</label>
+            <div class="form-floating mb-3 bg-light">
+                <input asp-for="Input.Name" class="form-control" autocomplete="name" aria-required="true" placeholder="Digite seu nome completo" />
+                <span asp-validation-for="Input.Name" class="text-danger"></span>
+            </div>
+
+            <!-- E-mail -->
+            <label asp-for="Input.Email">E-mail</label>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+
+
+
+            <!-- Telefone -->
+            <label asp-for="Input.Phone">Telefone</label>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.Phone" class="form-control" autocomplete="tel" aria-required="true" placeholder="(00) 00000-0000" />
+                <span asp-validation-for="Input.Phone" class="text-danger"></span>
+            </div>
+
+            <!-- Senha -->
+            <label asp-for="Input.Password">Senha</label>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+            </div>
+
+            <!-- Confirmação da Senha -->
+            <label asp-for="Input.ConfirmPassword">Confirme sua senha</label>
+            <div class="form-floating mb-3">
+                <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
+                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+            </div>
+
+            <div class="bntcad mt-2 justify-content-center">
+                <input id="login-submit" type="submit" value="Cadastrar" class="btn-lg" />
+                <input id="login-submit" type="button" value="Voltar" asp-action="Index" class="btn-lg" onclick="window.location.href='@Url.Action("Index", "Home")';" />
+            </div>
+
+        </form>
+    </div>
+</div>
+<br>
+<br>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

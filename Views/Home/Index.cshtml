@@ -1,0 +1,190 @@
+﻿@{
+    ViewData["Title"] = "Home";
+
+}
+
+<!-- Carrossel -->
+<div class="carrossel">
+    <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="~/img/promocao.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="~/img/queijoArtersanal.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="~/img/entrega.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" href="https://www.whatsapp.com/">
+                <img src="~/img/Whatsapp.png"  class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+<!-- Benefícios -->
+<div class="frase">
+    <div class="icon-wrapper justify-content-center">
+        <div class="icon-text">
+            <i class="bi bi-shop"></i>
+            <span>PRODUTOS ARTESANAIS</span>
+        </div>
+
+        <div class="vertical-bar"></div> <!-- Barra vertical -->
+
+        <div class="icon-wrapper">
+            <div class="icon-text">
+                <i class="bi bi-truck"></i>
+                <span>RECEBA EM CASA</span>
+            </div>
+        </div>
+
+        <div class="vertical-bar"></div> <!-- Barra vertical -->
+
+        <div class="icon-wrapper">
+            <div class="icon-text">
+                <i class="bi bi-check-circle"></i>
+                <span>QUALIDADE APROVADA</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Título Lançamentos com linha -->
+<div class="linhas w-100">
+    <hr class="styleLinha" size="4" />
+    <h1 class="lancaLinha">DESTAQUES</h1>
+    <hr class="styleLinha" size="4">
+</div>
+
+
+<div id="divpai">
+    <div>
+    </div>
+</div>
+
+
+
+<!--
+<div class="d-flex ">
+    <div class="fotosdiv w-25">
+        <img src="~/img/queijoRaclette1.jpg" class="foto1 d-block " alt="...">
+    </div>
+    <div class= " d-flex w-75 " id="divimgs">
+        <img src="~/img/geleiaUva4.jpg" class="foto2 d-block " alt="...">
+        <img src="~/img/geleiaAmora1.jpg" class="foto2 d-block " alt="...">
+        <img src="~/img/queijoGorgonzola3.jpg" class="foto2 d-block " alt="...">
+        <img src="~/img/queijoRaclette1.jpg" class="foto2 d-block " alt="...">
+        <img src="~/img/queijoRaclette1.jpg" class="foto2 d-block " alt="...">
+        <img src="~/img/queijoRaclette1.jpg" class="foto2 d-block " alt="...">
+
+    </div>
+</div>
+-->
+<!-- Imagem Qualidade -->
+<div class="container-fotos">
+    <img class="qualidade justify-content-center" src="~/img/qualidade.png" alt="Qualidade" />
+</div>
+
+<!-- Título Produtos com linha -->
+<div class="linhas w-100">
+    <hr class="styleLinha" size="4" />
+    <h1 class="lancaLinha">PRODUTOS</h1>
+    <hr class="styleLinha" size="4">
+</div>
+
+<!-- Cards -->
+<!-- Cards -->
+<div class="container-card">
+    <div class="cardsIni">
+        <img src="/img/queijoGorgonzola1.jpg" class="card-img-top" alt="...">
+        <div class="card-body  text-center">
+            <h5 class="card-title"> <b> Queijo Gorgonzola</b></h5>
+            <p class="card-text"><b>R$58,90</b></p>
+            <a href="https://www.whatsapp.com/" class="btn-card  card-sem-margem fw-bold">Comprar</a>
+        </div>
+    </div>
+    <div class="cardsIni">
+        <img src="/img/queijoGouda8.png" class="card-img-top" alt="...">
+        <div class="card-body  text-center">
+            <h5 class="card-title"> <b>Queijo Gouda</b></h5>
+            <p class="card-text"><b>R$76,90</b></p>
+            <a href="https://www.whatsapp.com/" class="btn-card  card-sem-margem fw-bold">Comprar</a>
+        </div>
+    </div>
+    <div class="cardsIni">
+        <img src="/img/queijoBrie8.png" class="card-img-top" alt="...">
+        <div class="card-body  text-center">
+            <h5 class="card-title"> <b> Queijo Brie</b></h5>
+            <p class="card-text"><b>R$45,90</b></p>
+            <a href="https://www.whatsapp.com/" class="btn-card  card-sem-margem fw-bold">Comprar</a>
+        </div>
+    </div>
+
+    <div class="cardsIni">
+        <img src="/img/geleiaFramboesa8.png" class="card-img-top" alt="...">
+        <div class="card-body  text-center">
+            <h5 class="card-title"> <b>Geleia de Framboesa</b></h5>
+            <p class="card-text"><b>R$24,90</b></p>
+            <a href="https://www.whatsapp.com/" class="btn-card  card-sem-margem fw-bold">Comprar</a>
+        </div>
+    </div>
+
+    <div class="cardsIni">
+        <img src="/img/geleiaFigo8.png" class="card-img-top" alt="...">
+        <div class="card-body  text-center">
+            <h5 class="card-title"> <b>Geleia de Figo</b></h5>
+            <p class="card-text"><b>R$20,50</b></p>
+            <a href="https://www.whatsapp.com/" class="btn-card  card-sem-margem fw-bold">Comprar</a>
+        </div>
+    </div>
+
+    <div class="cardsIni">
+        <img src="~/img/geleiaPimenta8.png" .jpg" class="card-img-top" alt="...">
+        <div class="card-body  text-center">
+            <h5 class="card-title"> <b>Geleia de Pimenta</b></h5>
+            <p class="card-text"><b>R$89,90</b></p>
+            <a href="https://www.whatsapp.com/" class="btn-card  card-sem-margem fw-bold">Comprar</a>
+        </div>
+    </div>
+    <div class="cardsIni">
+        <img src="/img/geleiaAmora8.png" .jpg" class="card-img-top" alt="...">
+        <div class="card-body  text-center">
+            <h5 class="card-title"> <b>Geleia de Amora</b></h5>
+            <p class="card-text"><b>R$41,90</b></p>
+            <a href="https://www.whatsapp.com/" class="btn-card  card-sem-margem fw-bold">Comprar</a>
+        </div>
+    </div>
+
+    <div class="cardsIni">
+        <img src="/img/queijoRaclette8.png" .jpg" class="card-img-top" alt="...">
+        <div class="card-body  text-center">
+            <h5 class="card-title"> <b>Queijo Raclette</b></h5>
+            <p class="card-text"><b>R$97,90</b></p>
+            <a href="https://www.whatsapp.com/" class="btn-card  card-sem-margem fw-bold">Comprar</a>
+        </div>
+
+
+    </div>
+  
+</div>
+<div>
+    <a class="btnver row justify-content-center d-flex fw-bold" href="https://localhost:7077/Produtos/ProdutosCard" role="button">VER MAIS</a>
+</div>
+
+
+
